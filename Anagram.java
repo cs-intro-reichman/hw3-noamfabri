@@ -61,7 +61,12 @@ public class Anagram {
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
 	str = preProcess(str);	
-	
-		return "";
+	String strandom = "";
+	while (str.length() > 0){
+		int n = (int) (Math.random() * str.length());
+		strandom += str.charAt(n);
+		str = str.substring(0, n) + str.substring(n + 1);
+	}
+		return strandom;
 	}
 }
