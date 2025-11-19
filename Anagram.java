@@ -42,7 +42,7 @@ public class Anagram {
 				}
 					j++;	
 	        }
-			if (blabla = false) {
+			if (blabla == false) {
 				return false;	
 			}	
 		}
@@ -53,14 +53,15 @@ public class Anagram {
 	// to lower-case, and all the other characters are deleted, except for spaces, which are left
 	// as is. For example, the string "What? No way!" becomes "whatnoway"
 	public static String preProcess(String str) {
-		str = str.toLowerCase().replaceAll("[a-z]", "");
+		str = str.toLowerCase().replaceAll("[^a-z]", "");
 		return str;
 	} 
 	   
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
-		// Replace the following statement with your code
+	str = preProcess(str);	
+	
 		return "";
 	}
 }
